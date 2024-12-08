@@ -15,6 +15,9 @@ namespace MyLibrary
         public decimal UnitPrice { get; } = unitPrice;
         public int UnitsInStock { get; } = unitsInStock;
     
-   
-     }
+        public bool Discontinued { get; private set; }
+        public bool SetDiscontinued() => Discontinued = true;
+
+        public bool GetStatus() => Discontinued = Discontinued;
+    }
 }
