@@ -1,6 +1,8 @@
-﻿using System;
+﻿using MyLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,9 +17,11 @@ namespace MyLibrary
         {
             return 5;
         }
-        public abstract decimal CalculateMonthlyPayment();
-        
-    }
+        public virtual decimal CalculateMonthlyPayment();
+        {
+            return 12000;
+        }
+}
     public class Secretary : Employee
     {
         public override decimal CalculateMonthlyPayment() => 15000;
@@ -30,6 +34,11 @@ namespace MyLibrary
             return 30000;
         }
     }
+public class Developer : Employee
+{ 
+}
+
 
 
 }
+

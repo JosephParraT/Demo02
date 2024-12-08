@@ -1,10 +1,16 @@
-﻿
-using MyLibrary;
-using System.Net.Http.Headers;
+﻿using MyLibrary;
 
-int i = 5;
-string Name = "Hello";
+Secretary Maria = new Secretary();
+Maria.Name = "Maria";
+Manager Pedro = new Manager ();
+Pedro.name = "Pedro";
+Developer Miguel = new Developer ();
 
-Product Leche;
-Leche = new Product(1, "Leche Entera", 19, 100);
+WriteEmployeeInfo(Maria);
+WriteEmployeeInfo(Pedro);
+WriteEmployeeInfo(Miguel);
 
+void WriteEmployeeInfo(Employee employee)
+{
+    Console.WriteLine($"{employee.Name}:{employee.CalculateMonthlyPayment()}");
+}
