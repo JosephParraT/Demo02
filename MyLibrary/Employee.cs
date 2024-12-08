@@ -11,14 +11,25 @@ namespace MyLibrary
         public int Id { get; set; }
         public string Name { get; set; }
 
+        public int GetInt()
+        {
+            return 5;
+        }
         public abstract decimal CalculateMonthlyPayment();
         
     }
     public class Secretary : Employee
     {
+        public override decimal CalculateMonthlyPayment() => 15000;
+        
+    }
+    public class Manager : Employee
+    {
         public override decimal CalculateMonthlyPayment()
         {
-            throw new NotImplementedException();
+            return 30000;
         }
     }
+
+
 }
